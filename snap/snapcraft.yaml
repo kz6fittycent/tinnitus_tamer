@@ -27,6 +27,12 @@ apps:
   tinnitustamer:
     extensions:
       - kde-neon-6
+    environment:
+      LC_ALL: C.UTF-8
+      LANG: C.UTF-8
+      PYTHONPATH: $SNAP/lib/python3.12/site-packages
+      LD_LIBRARY_PATH: $SNAP/lib/python3.12/site-packages/PyQt6/Qt6:$SNAP/kf6/usr/lib/x86_64-linux-gnu:/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:$SNAP/usr/lib:$SNAP/lib:$SNAP/lib/x86_64-linux-gnu:$SNAP/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+      QT_PLUGIN_PATH: $SNAP/lib/python3.12/site-packages/PyQt6/Qt6/plugins/platforms      
     command: usr/share/tinnitustamer/tinnitus_tamer.py 
     plugs:
       - audio-playback
@@ -40,9 +46,18 @@ parts:
     plugin: python
     python-requirements:
       - requirements.txt
+    
+    python-packages: 
+      - PyQt6==6.5.0
+            
+    build-packages:
+      - libxcb-cursor0
+      - qt6-base-dev 
+     
     stage-packages:
       - libasound2
-      - libpulse0    
+      - libpulse0 
+      - libxcb-cursor0     
     
 #    override-pull: |
 #      craftctl default
