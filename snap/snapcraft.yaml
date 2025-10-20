@@ -70,6 +70,6 @@ parts:
       cp snap/gui/*.png $SNAPCRAFT_PART_INSTALL/usr/share/tinnitustamer/
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/share/applications
       cp snap/gui/tinnitus_tamer.desktop $SNAPCRAFT_PART_INSTALL/usr/share/applications/
+      
     organize:
-      'usr/share/tinnitustamer/tinnitus_tamer.py': usr/share/tinnitustamer/tinnitus_tamer.py
-      'usr/share/tinnitustamer/icons/*': usr/share/tinnitustamer/icons/              
+      '*': usr/share/tinnitustamer/            
