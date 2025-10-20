@@ -72,4 +72,5 @@ parts:
       cp snap/gui/tinnitus_tamer.desktop $SNAPCRAFT_PART_INSTALL/usr/share/applications/
       
     organize:
-      '*': usr/share/tinnitustamer/            
+      'usr/share/tinnitustamer/tinnitus_tamer.py': usr/share/tinnitustamer/tinnitus_tamer.py
+      'usr/share/tinnitustamer/icons/*': usr/share/tinnitustamer/icons/               
