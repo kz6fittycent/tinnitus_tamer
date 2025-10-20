@@ -1,0 +1,67 @@
+name: tinnitustamer
+title: Tinnitus Tamer
+#adopt-info: tinnitustamer
+version: '1.0'
+summary: An application to help with tinnitustamer
+description: |
+  Tinnitus Tamer is a Python application designed to provide relief for tinnitus sufferers by generating and mixing calming sounds, including white, pink, brown, wind, ocean, and waterfall noises. It features a customizable notch filter to target specific tinnitus frequencies and system tray integration for background playback.
+
+grade: stable
+confinement: strict
+license: MIT
+base: core24
+compression: lzo
+
+contact: https://github.com/kz6fittycent/tinnitus_tamer/issues
+issues: https://github.com/kz6fittycent/tinnitus_tamer/issues
+source-code: https://github.com/kz6fittycent/tinnitus_tamer
+icon: snap/gui/tinnitus_tamer.png
+donation: https://www.patreon.com/kz6fittycent
+
+platforms:
+  amd64:
+    build-on: [amd64]
+    build-for: [amd64]
+  arm64:
+    build-on: [arm64]
+    build-for: [arm64]
+  ppc64el:
+    build-on: [ppc64el]
+    build-for: [ppc64el]
+    
+apps:
+  tinnitustamer:
+    extensions:
+      - gnome  
+    command: usr/share/tinnitustamer/tinnitus_tamer.py 
+    plugs:
+      - audio-playback
+      - home
+      - system-tray    
+      - desktop
+    
+parts:
+  tinnitustamer:
+    source: https://github.com/kz6fittycent/tinnitus_tamer
+    source-type: git
+    plugin: python
+    python-requirements:
+      - requirements.txt
+    stage-packages:
+      - libasound2
+      - libpulse0    
+    
+#    override-pull: |
+#      craftctl default
+#      craftctl set version="$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)" 
+      
+    override-build: |
+      craftctl default
+      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/share/tinnitustamer/icons
+      cp tinnitus_tamer.py $SNAPCRAFT_PART_INSTALL/usr/share/tinnitustamer/
+      cp snap/gui/*.png $SNAPCRAFT_PART_INSTALL/usr/share/tinnitustamer/
+      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/share/applications
+      cp snap/gui/tinnitus_tamer.desktop $SNAPCRAFT_PART_INSTALL/usr/share/applications/
+    organize:
+      'usr/share/tinnitustamer/tinnitus_tamer.py': usr/share/tinnitustamer/tinnitus_tamer.py
+      'usr/share/tinnitustamer/icons/*': usr/share/tinnitustamer/icons/              

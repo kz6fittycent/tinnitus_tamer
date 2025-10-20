@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Tinnitus Tamer
+GenericName=Tinnitus Tamer
+Comment=An application to help with tinnitus
+Exec=tinnitustamer
+Icon=tinnitus_tamer.png
+Terminal=false
+Type=Application
+StartupNotify=false
+Categories=Utility;
+Keywords=tinnitus;tamer
