@@ -51,14 +51,14 @@ parts:
       - PyQt6==6.5.0
             
     build-packages:
-      - libxcb-cursor0
+      - libxcb-cursor-dev
       - qt6-base-dev 
      
     stage-packages:
       - libasound2
       - libpulse0 
-      - libxcb-cursor0  
-      - xcb-cursor0   
+      - libxcb-cursor-dev  
+      - xcb  
     
 #    override-pull: |
 #      craftctl default
