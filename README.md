@@ -8,10 +8,10 @@ Tinnitus Tamer is a Python application designed to provide relief for tinnitus s
 - **Seamless Looping**: 60-second audio loops with 3-second crossfade for uninterrupted playback.
 - **Persistent Settings**: Save and load volume, frequency, and Q settings across sessions using `QSettings`.
 - **System Tray**: Minimize to system tray with options to restore or quit, including a notification on minimize.
-- **Modern UI**: Styled with the One Dark Two theme (#282c34 background, #abb2bf text, #61afef accents) using PyQt5's `QPalette` and stylesheet.
+- **Modern UI**: Styled with the One Dark Two theme (#282c34 background, #abb2bf text, #61afef accents) using PyQt6's `QPalette` and stylesheet.
 - **Custom Icons**: 256x256 desktop icon and 32x32 tray icon (to be created with an ear and sound wave design).
 - **About Dialog**: Accessible via Help > About, displaying version, MIT license, and Grok acknowledgment.
-- **Snap Support**: Designed for deployment as a Snap package with audio and tray integration.
+- **Snap Support**: Deployable as a Snap package with audio and desktop integration using `core24`.
 
 ## Installation
 

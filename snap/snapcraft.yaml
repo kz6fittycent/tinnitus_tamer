@@ -68,7 +68,7 @@ parts:
       craftctl default
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/share/tinnitustamer/icons
       cp tinnitus_tamer.py $SNAPCRAFT_PART_INSTALL/usr/share/tinnitustamer/
-      cp snap/gui/*.png $SNAPCRAFT_PART_INSTALL/usr/share/tinnitustamer/
+      cp snap/gui/*.png $SNAPCRAFT_PART_INSTALL/usr/share/tinnitustamer/icons
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/share/applications
       cp snap/gui/tinnitus_tamer.desktop $SNAPCRAFT_PART_INSTALL/usr/share/applications/
       
