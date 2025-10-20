@@ -7,12 +7,12 @@ from scipy.io import wavfile
 import pygame
 import tempfile
 import os
-from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
+from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
                             QSlider, QLabel, QPushButton, QLineEdit, QHBoxLayout,
                             QMenu, QStyle, QSystemTrayIcon, QMenuBar, QMessageBox)
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QIcon, QPalette, QColor
-from PyQt5.QtCore import QSettings
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QIcon, QPalette, QColor
+from PyQt6.QtCore import QSettings
 
 class TinnitusTamer(QMainWindow):
     def __init__(self):
