@@ -25,9 +25,6 @@ platforms:
   arm64:
     build-on: [arm64]
     build-for: [arm64]
-  ppc64el:
-    build-on: [ppc64el]
-    build-for: [ppc64el]
     
 apps:
   tinnitustamer:
