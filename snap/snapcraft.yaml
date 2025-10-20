@@ -57,7 +57,8 @@ parts:
     stage-packages:
       - libasound2
       - libpulse0 
-      - libxcb-cursor0     
+      - libxcb-cursor0  
+      - xcb-cursor0   
     
 #    override-pull: |
 #      craftctl default
