@@ -61,12 +61,12 @@ parts:
       - libasound2
       - libpulse0
       - libxcb-cursor0
-      - libqt6core6
-      - libqt6gui6
-      - libqt6widgets6
-      - libqt6dbus6
+      - libqt6core6t64
+      - libqt6gui6t64
+      - libqt6widgets6t64
+      - libqt6dbus6t64
       - libx11-xcb1
-      - libqt6x11extras6
+      - libqt63dextras6
     
 #    override-pull: |
 #      craftctl default
