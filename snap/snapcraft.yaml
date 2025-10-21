@@ -80,8 +80,5 @@ parts:
       cp -r snap/gui/*.png $SNAPCRAFT_PART_INSTALL/usr/share/tinnitustamer/icons/
     
     organize:
-      tinnitus_tamer.py: usr/share/tinnitustamer/tinnitus_tamer.py
-      icons/tinnitus_tamer_desktop.png: usr/share/tinnitustamer/icons/tinnitus_tamer_desktop.png
-      icons/tinnitus_tamer_tray.png: usr/share/tinnitustamer/icons/tinnitus_tamer_tray.png
-      snap/gui/tinnitus_tamer.desktop: usr/share/applications/tinnitus_tamer.desktop
-      snap/gui/tinnitus_tamer.png: usr/share/tinnitustamer/icons/tinnitus_tamer.png             
+      'usr/share/tinnitustamer/tinnitus_tamer.py': usr/share/tinnitustamer/tinnitus_tamer.py
+      'usr/share/tinnitustamer/icons/*': usr/share/tinnitustamer/icons/  
